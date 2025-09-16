@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manila Devaraja</title>
+  <!-- Font Awesome & Academicons for Icons -->
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+  />
+  
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    /* ========= GLOBAL VARIABLES ========= */
+    :root {
+      /* 🎨 Colors */
+      --background-light: #fcfbf7;
+      --text-dark: #1a1a1a;
+      --accent-color: #e65100;
+      --nav-bg: #ffffff;
+      --nav-text: #1a1a1a;
+
+      /* 🖋️ Fonts */
+      --main-font: "Inter", system-ui, sans-serif;
+    }
+
+    /* ========= BASE STYLES ========= */
+    body {
+      margin: 0;
+      font-family: var(--main-font);
+      background: var(--background-light);
+      color: var(--text-dark);
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .highlight-name {
+      color: #e65100; 
+      font-weight: bold;
+      /* text-decoration: underline; */
+    }
+
+    /* ========= NAVBAR ========= */
+    nav {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      background: var(--nav-bg);
+      border-bottom: 1px solid #e0e0e0;
+      z-index: 10;
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .nav-logo {
+      font-weight: bold;
+      color: var(--nav-text);
+      font-size: 1.2rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      color: var(--nav-text);
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-color);
+    }
+
+    /* ========= MAIN SECTION ========= */
+    .main {
+      position: relative;
+    }
+
+    .main-content {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 3rem;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .main-text h1 {
+      font-size: 3.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .main-text p {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .main-text a {
+      color: #e65100; 
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .main-text a:hover {
+        text-decoration: underline;
+    }
+
+    /* Image Column */
+    .main-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+    }
+
+    /* ========= SOCIAL ICONS ========= */
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1.2rem;
+    }
+
+    .social-icons a {
+      font-size: 2.5rem;
+      color: var(--accent-color);
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #d2aaca;
+    }
+
+    .resume-container {
+      display: flex;
+      justify-content: center; /* centers button horizontally */
+      margin-top: 1rem;
+    }
+
+    .resume-btn {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      border: 2px solid #e65100;
+      color: #e65100;
+      background: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .resume-btn:hover {
+      background: #e65100;
+      color: #fff;
+    }
+
+    .site-footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #1a1919;
+      border-top: 1px solid #ddd;
+      background: #f9f5f5;
+    }
+
+
+    /* ========= MOBILE ========= */
+    @media (max-width: 768px) {
+      .main-content {
+        grid-template-columns: 1fr; /* stack */
+      }
+      .main-image {
+        order: 1; /* image first */
+      }
+      .main-text {
+        order: 2;
+        text-align: center;
+      }
+      .main-text h1 {
+        font-size: 2.2rem;
+      }
+      .resume-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav>
+    <div class="nav-container">
+      <div class="nav-logo">Manila Devaraja</div>
+      <div class="nav-links">
+        <a href="#main">Home</a>
+        <a href="#publications">Publications</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <!-- <a href="#contact">Awards and Service</a> -->
+      </div>
+    </div>
+  </nav>
+
+<section class="main" id="main">
+    <div class="main-content">
+      <div class="main-text">
+        <span class="highlight-name"><h1>Manila Devaraja</h1></span>
+        <p>I’m a PhD student at the University of Utah, specializing in <em>Usable Privacy and Security</em>, advised by <a href="https://scholar.google.com/citations?user=JGEniHoAAAAJ&hl=en">Prof. Sameer Patil</a>. 
+        Broadly, my research focuses on improving the end-user experience of managing privacy. 
+        At the core, my work emphasizes <strong>personalized design for privacy management</strong> which adapts to contextual changes and real-time usage of resources.
+        My other projects include exploring interdependent privacy in smartphone permissions, investigating sharenting and children’s online safety, and designing usable tools for real-world privacy challenges.</p>
+
+        <p>Prior to my PhD, I completed a Master’s degree with a specialization in <em>Data Analysis and Management</em> under the guidance of <a href="https://profiles.faculty.utah.edu/u0571376">Prof. Arul Mishra</a> and <a href="https://profiles.faculty.utah.edu/u0521228">Prof. Himanshu Mishra</a>. 
+        My Master's Project explored modeling human intertemporal decision-making with symbolic regression to mathematically capture how people weigh trade-offs over time.</p>
+        
+        <p> I am actively looking for <strong>internships in Spring/Summer 2026</strong>. <br>
+        My vision is to translate academic research into products that make online spaces safer, more private, and user-centered.
+        I bring expertise in <strong>data analysis, machine learning, privacy & security, and behavioral research</strong>.<br>
+        If my work resonates with you, I am always open to talking over a cup of chai (or coffee)!
+        Reach out to me on <a href="https://www.linkedin.com/in/manila-devaraj">LinkedIn</a> or <a href="mailto:maniladevaraj@gmail.com">Email</a>!
+        </p>
+      </div>
+
+      <div class="main-image">
+        <img src="images/display-image.jpg" alt="Placeholder Image">
+
+        <div class="social-icons">
+          <a href="mailto:maniladevaraj@gmail.com"><i class="fas fa-envelope"></i></a>
+          <a href="https://www.linkedin.com/in/manila-devaraj" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://scholar.google.com/citations?user=yourid&user=2wBi1i8AAAAJ" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+          <a href="https://github.com/manila-devaraj" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+
+        <div class="resume-container">
+          <a href="resume.pdf" target="_blank" class="resume-btn">Resume</a>
+        </div>        
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== UPDATES ===== -->
+<section id="updates" class="updates">
+  <h2 class="section-title">Updates</h2>
+
+  <div class="update-entry">
+    <div class="update-date">September 2025</div>
+    <div class="update-text">
+      I'll be presenting my research on 
+      <a href="https://doi.org/10.1145/3743739">"Understanding User Prioritization and Comprehension of Smartphone Permissions"</a> 
+      at MobileHCI 2025. Come check it out! 🕵🏻
+    </div>
+  </div>
+
+  <div class="update-entry">
+    <div class="update-date">June 2025</div>
+    <div class="update-text">
+      Doctoral Consortium paper on "Redesigning Smartphone Permissions Managers for User-Centered Privacy Management" accepted at <a href="https://mobilehci.acm.org/2025/index.php">MobileHCI 2025</a>! See you in Egypt! 🇪🇬
+    </div>
+  </div>
+
+  <div class="update-entry">
+    <div class="update-date">May 2025</div>
+    <div class="update-text">
+      My first first-author paper got accepted at <a href="https://mobilehci.acm.org/2025/index.php">MobileHCI 2025</a>! 🥳
+    </div>
+  </div>
+
+  
+
+  <div class="update-entry">
+    <div class="update-date">June 2024</div>
+    <div class="update-text">
+      I gave a talk at <a href="https://www.schneier.com/shb/2024/" class="doi">SHB 2024</a> on "Users Preferences and Comprehension of Smartphone Permission Settings." You can check out the <a href="https://youtu.be/0wGpt9d7eCA?si=NVgo3SVdvuf6uFOj">audio recording</a> and <a href="https://vaniea.com/post/shb-2024-day2/">blog post</a> here! 
+    </div>
+  </div>
+
+  <div class="update-entry">
+    <div class="update-date">June 2024</div>
+    <div class="update-text">
+      I got accepted to attend <a href="https://www.usenix.org/conference/grepsecvi" class="doi">GREPSEC VI Workshop</a> as a part of <a href="https://www.usenix.org/conf%C3%A9rence/usenixsecurity23"></a>USENIX Security '23! 
+    </div>
+  </div>
+
+
+  <div class="update-entry">
+    <div class="update-date">May 2023</div>
+    <div class="update-text">
+      Started my PhD research under the supervision of <a href="https://scholar.google.com/citations?user=JGEniHoAAAAJ&hl=en">Prof. Sameer Patil</a>!
+    </div>
+  </div>
+
+</section>
+
+
+<style>
+
+.updates {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+.updates .section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.update-entry {
+  display: grid;
+  grid-template-columns: 150px 1fr; /* column 1 = date, column 2 = update */
+  column-gap: 2rem;
+  margin-bottom: 1.2rem;
+  display: grid;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.update-date {
+  font-weight: 600;
+  color: #242222;
+  padding-right: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: right;
+}
+
+.update-text {
+  color: #212020;
+  line-height: 1.6;
+  font-size: 1.2rem;
+}
+
+.update-text a {
+  color: #e65100;
+  text-decoration: none;
+}
+
+.update-text a:hover {
+  text-decoration: underline;
+}
+</style>
+
+
+
+<!-- ===== PUBLICATIONS SECTION ===== -->
+<section id="publications" class="publications">
+  <h2>Publications</h2>
+
+  <div class="pub-entry">
+    <div class="pub-details">
+      <p class="citation">
+        <span class="highlight-name">Manila Devaraja</span> and Sameer Patil. 2025. Understanding User Prioritization and Comprehension of Smartphone
+        Permissions. <em>Proc. ACM Hum.-Comput. Interact</em>. 9, 5, Article MHCI035 (September 2025), 46 pages. 
+        <a href="https://doi.org/10.1145/3743739" class="doi">doi:10.1145/3743739</a> 
+        <br>
+        <a href="#" class="toggle-link" data-target="bibtex1">[BibTeX]</a> 
+        <a href="#" class="toggle-link" data-target="abstract1">[Abstract]</a> 
+        <!-- <a href="paper.pdf" target="_blank">[PDF]</a>   -->
+      </p>
+      <pre id="bibtex1" class="hidden-content">
+        @article{10.1145/3743739,
+          author = {Devaraja, Manila and Patil, Sameer},
+          title = {Understanding User Prioritization and Comprehension of Smartphone Permissions},
+          year = {2025},
+          issue_date = {September 2025},
+          publisher = {Association for Computing Machinery},
+          address = {New York, NY, USA},
+          volume = {9},
+          number = {5},
+          url = {https://doi-org.ezproxy.lib.utah.edu/10.1145/3743739},
+          doi = {10.1145/3743739},
+          abstract = {Smartphones allow users to control the sharing of their data with apps according to their privacy preferences. Yet, users struggle to enact their privacy preferences via the available permission settings. To understand whether these difficulties result from inaccurate understanding and/or suboptimal interface design of the permissions manager, we designed and administered an online questionnaire to smartphone users from the United States (n = 151). We asked the participants to rate and rank the importance of the permissions commonly available on smartphones and to describe their understanding of what each setting controls. We found that a majority of users deem some permissions as important or unimportant, with the importance of other permissions varying across users based on use and privacy concerns. Our findings indicate that users misunderstand several permissions and express unfamiliarity with how some of them operate. We apply the insight from our study to derive suggestions to enhance smartphone permission managers by promoting personalized and efficient user interaction and more accurate user comprehension of functional operation.},
+          journal = {Proc. ACM Hum.-Comput. Interact.},
+          month = sep,
+          articleno = {MHCI035},
+          numpages = {46},
+          keywords = {Smartphone permissions, Permissions manager, Privacy, User Experience, UX, Usability, User Interface, UI, User interaction}
+          }
+      </pre>
+      <blockquote id="abstract1" class="hidden-content abstract">
+        Smartphones allow users to control the sharing of their data with apps according to their privacy preferences. 
+        Yet, users struggle to enact their privacy preferences via the available permission settings. 
+        To understand whether these difficulties result from inaccurate understanding and/or suboptimal interface design of the permissions manager, we designed and administered an online questionnaire to smartphone users from the United States (n = 151). 
+        We asked the participants to rate and rank the importance of the permissions commonly available on smartphones and to describe their understanding of what each setting controls. 
+        We found that a majority of users deem some permissions as important or unimportant, with the importance of other permissions varying across users based on use and privacy concerns. 
+        Our findings indicate that users misunderstand several permissions and express unfamiliarity with how some of them operate. 
+        We apply the insight from our study to derive suggestions to enhance smartphone permission managers by promoting personalized and efficient user interaction and more accurate user comprehension of functional operation.
+      </blockquote>
+    </div>
+  </div>
+
+  <div class="pub-entry">
+      <div class="pub-details">
+        <p class="citation">
+          <span class="highlight-name">Manila Devaraja</span>. 2025. Redesigning Smartphone Permissions Managers for User-Centered Privacy Management. In <em>Proceedings of the 27th International Conference on Mobile Human-Computer Interaction (MobileHCI
+            ’25 Adjunct), September 22–25, 2025, Sharm El-Sheikh, Egypt.</em>  ACM, New York, NY, USA, 3 pages.
+         <a href="https://doi.org/10.1145/3737821.3749453" class="doi">doi:10.1145/3737821.3749453</a> 
+          <br>
+          <a href="#" class="toggle-link" data-target="bibtex2">[BibTeX]</a> 
+          <a href="#" class="toggle-link" data-target="abstract2">[Abstract]</a> 
+          <!-- <a href="paper.pdf" target="_blank">[PDF]</a> -->
+        </p>
+      <pre id="bibtex2" class="hidden-content">
+        @inproceedings{10.1145/3737821.3749453,
+          author = {Devaraja, Manila},
+          title = {Redesigning Smartphone Permission Managers for User-Centered Privacy Management},
+          year = {2025},
+          isbn = {9798400719707},
+          publisher = {Association for Computing Machinery},
+          address = {New York, NY, USA},
+          url = {https://doi-org.ezproxy.lib.utah.edu/10.1145/3737821.3749453},
+          doi = {10.1145/3737821.3749453},
+          abstract = {The proliferation of mobile technologies has significantly increased the speed at which users create and manage personal data, yet users often remain unaware of how their data is accessed. While smartphone privacy management relies on permission systems, existing user interfaces frequently fall short of aligning with user privacy expectations. Prior studies have mainly explored runtime permissions, leaving the permissions manager interface, key for privacy control post-installation, under-examined. My dissertation aims to redesign the permissions managers interface to enhance usability and support more efficient and privacy-aware decision-making. It addresses three core challenges: (1) high cognitive load from numerous permissions; (2) absence of prompts for regular review; and (3) limited user understanding of the data accessed by permissions. To improve permission discoverability and comprehension, the proposed redesign will leverage personalization and customization techniques to support more informed user privacy decisions.},
+          booktitle = {Adjunct Proceedings of the 27th International Conference on Mobile Human-Computer Interaction},
+          articleno = {39},
+          numpages = {3},
+          keywords = {Smartphone permissions, Permissions manager, Privacy, User Experience, UX, Usability, User Interface, UI, User interaction},
+          location = {
+          },
+          series = {MobileHCI '25 Adjunct}
+          }
+      </pre>
+      <blockquote id="abstract2" class="hidden-content abstract">
+        The proliferation of mobile technologies has significantly increased the speed at which users create and manage personal data, yet users often remain unaware of how their data is accessed. 
+        While smartphone privacy management relies on permission systems, existing user interfaces frequently fall short of aligning with user privacy expectations. 
+        Prior studies have mainly explored runtime permissions, leaving the permissions manager interface, key for privacy control post-installation, under-examined. 
+        My dissertation aims to redesign the permissions managers interface to enhance usability and support more efficient and privacy-aware decision-making. 
+        It addresses three core challenges: (1) high cognitive load from numerous permissions; (2) absence of prompts for regular review; and (3) limited user understanding of the data accessed by permissions. 
+        To improve permission discoverability and comprehension, the proposed redesign will leverage personalization and customization techniques to support more informed user privacy decisions.
+      </blockquote>
+    </div>
+  </div>
+
+</section>
+
+<style>
+.publications {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.publications h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+}
+
+.pub-entry {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  align-items: flex-start;
+}
+
+.citation {
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+.citation a {
+  margin-left: 0.3rem;
+  color: #f89d47; /* highlight link color */
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.citation a:hover {
+  text-decoration: underline;
+}
+
+.citation .doi {
+  color: #f47352;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Abstract style */
+.abstract {
+  margin-top: 2rem;
+  font-style: italic;
+  color: #555;
+  border-left: 4px solid #ddd;
+  padding-left: 1rem;
+  line-height: 1.6;
+}
+
+/* BibTeX box */
+pre {
+  background: #f3f1f0;
+  padding: 1rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  white-space: pre-wrap;  
+  word-wrap: break-word; 
+  overflow: visible; 
+  margin-top: 1rem;
+  max-width: 100%; 
+}
+
+.hidden-content {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .pub-entry {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .pub-thumb img {
+    margin-bottom: 1rem;
+  }
+
+  .abstract, pre {
+    text-align: left;
+  }
+}
+</style>
+
+<script>
+document.querySelectorAll(".toggle-link").forEach(link => {
+  link.addEventListener("click", function(e) {
+    e.preventDefault();
+    const targetId = this.getAttribute("data-target");
+    const target = document.getElementById(targetId);
+    const parent = this.closest(".pub-details");
+    parent.querySelectorAll(".hidden-content").forEach(el => {
+      if (el.id !== targetId) el.style.display = "none";
+    });
+    target.style.display = (target.style.display === "block") ? "none" : "block";
+  });
+});
+</script>
+
+<!-- ===== PROJECTS ===== -->
+
+<section id="projects" class="projects">
+  <h2 class="section-title">Research Projects</h2>
+
+  <!-- Filter Bar -->
+  <div class="filter-bar">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="privacy">Privacy & Security</button>
+    <button class="filter-btn" data-filter="qualitative">Qualitative</button>
+    <button class="filter-btn" data-filter="quantitative">Quantitative</button>
+    <button class="filter-btn" data-filter="mixed">Mixed Methods</button>
+  </div>
+
+  <article class="project-entry" data-category="privacy quantitative qualitative mixed">
+    <div class="project-details">
+      <h3>Understanding of User Priortitization and Comprehension of Smartphone Permissions</h3>
+      <p>
+      Smartphones allow users to control the sharing of their data with apps according to their privacy preferences.
+      Yet, users struggle to enact their privacy preferences via the available permission settings. 
+      We administered an <span class="highlight-name">online questionnaire</span> to smartphone users from
+      the United States (𝑛 = 151). 
+      We analyzed the ratings and rankings of importance to understand how participants prioritize permissions in terms of absolute and relative importance.
+      We found that prioritization by users is largely based on their <span class="highlight-name">usage</span> and <span class="highlight-name">privacy concerns</span>. 
+      Our findings indicate that users <span class="highlight-name">misunderstand</span> permissions and 
+      express <span class="highlight-name">unfamiliarity</span> with a few permissions.
+      </p>
+      <a href="projects/smartphone_permissions/devaraja_patil_mobilehci-2025_video.pptx" target="_blank" class="btn">Slides</a>
+      <a href="projects/smartphone_permissions/privacysettingsui.pdf" target="_blank" class="btn">Paper</a>
+    </div>
+    <div class="project-media" data-autoplay="true">
+      <div class="slide fade"><img src="images/projects/smartphone_permissions/rating.png" /></div>
+      <div class="slide fade"><img src="images/projects/smartphone_permissions/ranking.png" /></div>
+      <div class="slide fade"><img src="images/projects/smartphone_permissions/importance_usage.png" /></div>
+      <div class="slide fade"><img src="images/projects/smartphone_permissions/importance_privacy.png" /></div>
+      <div class="slide fade"><img src="images/projects/smartphone_permissions/importance_othersprivacy.png" /></div>
+      <div class="slide fade"><img src="images/projects/smartphone_permissions/importance_control.png" /></div>
+      <div class="slide fade"><img src="images/projects/smartphone_permissions/unimportance_usage.png" /></div>
+      <div class="slide fade"><img src="images/projects/smartphone_permissions/unimportance_unfamiliarity.png" /></div>
+      <div class="slide fade"><img src="images/projects/smartphone_permissions/misunderstanding.png" /></div>
+      <div class="slide fade"><img src="images/projects/smartphone_permissions/recommendations.png" /></div>
+
+      <button class="nav prev">&#10094;</button>
+      <button class="nav next">&#10095;</button>
+    </div>
+  </article>
+
+  <article class="project-entry reverse" data-category="privacy qualitative">
+    <div class="project-details">
+      <h3>Parental Oversharing: Investigating “Sharenting Concerns” in the Digital Age</h3>
+      <p>
+        Sharenting refers to the practice of parents sharing information about their children, including
+        photos, videos, and personal details, on social media platforms. 
+        We collected data manually from subbreddits a total of 60 posts along with 10 comments per post, which was a total of <span class="highlight-name">600 comments</span>, which was <span class="highlight-name">qualitatively analyzed</span> by two authors.     
+        Safe Sharenting Practices involved achieveing the need to share their children's journey through private channels such as TinyBeans or Whatsapp, while safeguarding their privacy. 
+        Through this reserach, we understand the spectrum of parent's motivations, insights, and behaviors related to sharenting, covering motivations, concerns, perceptions, and strategies related to safe sharenting. 
+        <!-- Our project aims to use findings from this investigation to empower parents with knowledge and guidance to make informed decisions about sharing their children's information on social media platforms.  -->
+      </p>
+      <a href="projects/sharenting/SharentingQuotes.pptx" target="_blank" class="btn">Slides</a>
+      <a href="projects/sharenting/SharentingQuotes.pptx" target="_blank" class="btn">Report</a>
+    </div>
+    <div class="project-media" data-autoplay="true">
+      <div class="slide fade"><img src="images/projects/sharenting/sharenting.png" /></div>
+      <div class="slide fade"><img src="images/projects/sharenting/RQ1.png" /></div>
+      <div class="slide fade"><img src="images/projects/sharenting/RQ2.png" /></div>
+      <div class="slide fade"><img src="images/projects/sharenting/RQ3.png" /></div>
+      <div class="slide fade"><img src="images/projects/sharenting/RQ4.png" /></div>
+      <button class="nav prev">&#10094;</button>
+      <button class="nav next">&#10095;</button>
+    </div>
+  </article>
+
+  <article class="project-entry" data-category="privacy quantitative">
+    <div class="project-details">
+      <h3>Interdependent Privacy in Smartphone App Permissions</h3>
+      <p>
+        Users may unintentionally expose information about others on their devices when making smartphone permission decisions. 
+        In this study, we examine whether users take others’ privacy into account when making permission decisions. 
+        Specifically, we investigate whether providing <span class="highlight-name">visual cues</span> increases awareness of interdependent privacy, 
+        whether concerns differ across permission types, and whether users expect others to consider their privacy in similar situations.
+        This work is a replication study conducted through an <span class="highlight-name">online survey</span> and a <span class="highlight-name">between-subjects design</span>. 
+        Our findings show that participants were generally more concerned about protecting their own privacy than that of others. 
+        Importantly, the results indicate that participants were more attentive and responsive to other's privacy when they realized the requested data included information related to others.
+      </p>
+      <a href="projects/interdependent_privacy/Team 7 - Interdependent Privacy - Final.pptx" target="_blank" class="btn">Slides</a>
+      <a href="projects/interdependent_privacy/InterdependentPrivacy.pdf" target="_blank" class="btn">Report</a>
+    </div>
+    <div class="project-media" data-autoplay="true">
+      <div class="slide fade"><img src="images/projects/InterdependentPrivacy/interdependent_privacy.png" /></div>
+      <div class="slide fade"><img src="images/projects/InterdependentPrivacy/files.png" /></div>
+      <div class="slide fade"><img src="images/projects/InterdependentPrivacy/calendar.png" /></div>
+      <!-- <div class="slide fade"><img src="images/projects/InterdependentPrivacy/contacts.png" /></div> -->
+      <div class="slide fade"><img src="images/projects/InterdependentPrivacy/photos.png" /></div>
+      <button class="nav prev">&#10094;</button>
+      <button class="nav next">&#10095;</button>
+    </div>
+  </article>
+
+
+  <article class="project-entry reverse" data-category="privacy qualitative">
+    <div class="project-details">
+      <h3>Visualizing Open Data: Public Perceptions on Privacy</h3>
+      <p>
+        The reserach focussed on addressing how visualization impacts privacy, specifically exploring how the form
+        of visualization, as opposed to tabular data presentation, affects individual's perception of data privacy. To investigate we conducted <span class="highlight-name">survey</span> and <span class="highlight-name">semi-structured interviews</span>. 
+        We discovered that visualization indeed impacts the perception of data privacy, but this influence often "reinforces existing impressions" rather than completely reversing privacy perceptions.
+        We identified privacy, safety and social concerns expressed when the data was visualized differently other than the tabular format. 
+      </p>
+      <a href="projects/viz_and_privacy/Public Perceptions on Privacy.pptx" target="_blank" class="btn">Slides</a>
+      <a href="projects/viz_and_privacy/HCI_Report.pdf" target="_blank" class="btn">Report</a>
+    </div>
+    <div class="project-media" data-autoplay="true">
+      <div class="slide fade"><img src="images/projects/viz_and_privacy/vis_and_privacy.png" /></div>
+      <div class="slide fade"><img src="images/projects/viz_and_privacy/crime_report.png" /></div>
+      <div class="slide fade"><img src="images/projects/viz_and_privacy/real_estate.png" /></div>
+      <div class="slide fade"><img src="images/projects/viz_and_privacy/concerns.png" /></div>
+      <button class="nav prev">&#10094;</button>
+      <button class="nav next">&#10095;</button>
+    </div>
+  </article>
+
+  <article class="project-entry" data-category="quantitative">
+    <div class="project-details">
+      <h3>Intertemporal Analysis using Symbolic Regression</h3>
+      <p>
+
+        Humans routinely make choices between alternatives that have consequences unfolding over time. 
+        This study aimed to formulate a function that accounts for the discounting model of human decision-making over time.
+        An <span class="highlight-name">online questionnaire</span> was developed using Qualtrics that accesses the discounting structural thinking. 
+        Three modeling approaches, linear regression, polynomial regression, and a genetic programming algorithm, were applied to derive a symbolic expression of the decision-making function. 
+        <span class="highlight-name">3D visualisations</span> was used to explore the relationships among variables and evaluate the accuracy of the models.
+      </p>
+      <a href="projects/temporal_discounting/MastersProjectPresentation_Final.pptx" target="_blank" class="btn">Slides</a>
+      <a href="projects/temporal_discounting/ManilaDevarajaMSProject.pdf" target="_blank" class="btn">Report</a>
+    </div>
+    <div class="project-media" data-autoplay="true">
+      <div class="slide fade"><img src="images/projects/intertemporal_anaysis/intertemporal.png" /></div>
+      <div class="slide fade"><img src="images/projects/intertemporal_anaysis/gp.png" /></div>
+      <div class="slide fade"><img src="images/projects/intertemporal_anaysis/exp1.png" /></div>
+      <div class="slide fade"><img src="images/projects/intertemporal_anaysis/fulldata.png" /></div>
+      <button class="nav prev">&#10094;</button>
+      <button class="nav next">&#10095;</button>
+    </div>
+  </article>
+</section>
+
+<style>
+.projects {
+  max-width: 1200px;       
+  margin: 0 auto;
+  padding: 3rem 1rem 1rem;
+}
+.projects .section-title {
+  text-align: center;   
+  font-size: 2.2rem;
+  margin: 0 0 3rem;
+}
+
+.project-entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+.project-entry.reverse {
+  flex-direction: row-reverse;
+}
+
+.project-details {
+  flex: 1;
+}
+.project-details h3 {
+  margin: 0 0 0.75rem;
+  font-size: 2rem;
+  color: #d32304;
+}
+.project-details p {
+  margin: 0.35rem 0 1.25rem;
+  line-height: 1.65;
+  font-size: 1rem;
+}
+
+.project-details .btn:hover {
+  background: #e65100;
+  color: #fff;
+}
+
+.project-details .btn {
+  display: inline-block;
+  margin-right: 0.8rem;
+  padding: 0.65rem 1.2rem;
+  background: transparent;
+  color: #e65100;
+  border: 2px solid #e65100;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.98rem;
+  transition: all 0.2s ease;
+}
+
+.project-media {
+  flex: 1;
+  position: relative;
+  width: 100%;
+}
+.project-media .slide { display: none; }
+.project-media img {
+  width: 100%;
+  height: auto;
+  max-height: 480px; 
+  object-fit: contain;
+  border-radius: 14px;
+  display: block;
+}
+
+/* Nav arrows */
+.project-media .nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;         
+}
+.project-media .prev { left: 10px; }
+.project-media .next { right: 10px; }
+.project-media .nav:hover { background: rgba(0,0,0,0.8); }
+
+
+  .filter-bar {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+  }
+  .filter-btn {
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: #f8947c;
+    color: #121111;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  .filter-btn.active {
+    background: #f8947c;
+    font-weight: bold;
+  }
+
+  .project-entry {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  .project-entry.hide {
+    opacity: 0;
+    transform: scale(0.95);
+    pointer-events: none;
+    position: absolute;
+  }
+
+.fade { animation: fadeIn 500ms ease; }
+@keyframes fadeIn { from {opacity: .3;} to {opacity: 1;} }
+
+@media (max-width: 900px) {
+  .project-entry,
+  .project-entry.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+  </style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const entries = document.querySelectorAll(".project-entry");
+  
+    entries.forEach((entry) => {
+      const slides = entry.querySelectorAll(".project-media .slide");
+      const prevBtn = entry.querySelector(".project-media .prev");
+      const nextBtn = entry.querySelector(".project-media .next");
+  
+      let idx = 0;
+      const show = (i) => {
+        slides.forEach((s, k) => (s.style.display = k === i ? "block" : "none"));
+      };
+      show(0);
+  
+      if (slides.length <= 1) {
+        if (prevBtn) prevBtn.style.display = "none";
+        if (nextBtn) nextBtn.style.display = "none";
+        return;
+      }
+      prevBtn.style.display = "block";
+      nextBtn.style.display = "block";
+      const next = () => { idx = (idx + 1) % slides.length; show(idx); };
+      const prev = () => { idx = (idx - 1 + slides.length) % slides.length; show(idx); };
+      let timer = setInterval(next, 5000);
+      const restart = (fn) => { clearInterval(timer); fn(); timer = setInterval(next, 5000); };
+  
+      nextBtn.addEventListener("click", () => restart(next));
+      prevBtn.addEventListener("click", () => restart(prev));
+
+      const media = entry.querySelector(".project-media");
+      media.addEventListener("mouseenter", () => clearInterval(timer));
+      media.addEventListener("mouseleave", () => { clearInterval(timer); timer = setInterval(next, 5000); });
+    });
+  });
+  </script>
+  
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const filterBtns = document.querySelectorAll(".filter-btn");
+    const projects = document.querySelectorAll(".project-entry");
+  
+    filterBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        filterBtns.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+  
+        const filter = btn.dataset.filter;
+  
+        projects.forEach(project => {
+          const categories = project.dataset.category.split(" ");
+          if (filter === "all" || categories.includes(filter)) {
+            project.classList.remove("hide");
+          } else {
+            project.classList.add("hide");
+          }
+        });
+      });
+    });
+  });
+</script>
+
+<section id="skills" class="skills">
+  <h2 class="section-title">Skills</h2>
+
+  <div class="skills-grid">
+    <div class="skill-category">User Research</div>
+    <div class="skill-items">Interview, <strong>Survey (HIGH PROFICIENCY)</strong></div>
+
+    <div class="skill-category">Research Methods</div>
+    <div class="skill-items">Mixed-method, Data Scraping (BeautifulSoup), Qualitative Analysis (Thematic Analysis), Quantitative Analysis, Statistics and Data Analysis (Python and R),<strong> Research Writing (LaTeX)</strong> </div>
+
+    <div class="skill-category">Languages</div>
+    <div class="skill-items"><strong>Python, R, SQL [Postgres, MS-SQL, MySQL] (HIGH PROFICIENCY)</strong>, JavaScript, HTML,XML, JSON, CSS, C/C++</div>
+
+    <div class="skill-category">Data Science and Machine Learning</div>
+    <div class="skill-items">Scikit-learn, Pytorch, XGBoost,<strong>Matplotlib,  NumPy, Pandas (HIGH PROFICIENCY)</strong>, Seaborn,<strong> ggplot2, dplyr (HIGH PROFICIENCY)</strong>, tidyverse, BeautifulSoup</div>
+
+    <div class="skill-category">Tools & Frameworks</div>
+    <div class="skill-items"> Git, Docker, Android Studio, Express.js, Django, React.js, Tensorflow</div>
+
+    <div class="skill-category">Database</div>
+    <div class="skill-items">MongoDB, Oracle, MySQL</div>
+  </div>
+</section>
+
+<style>
+  /* Skills Section */
+.skills {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+.skills .section-title {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  row-gap: 1.5rem;
+  column-gap: 2rem;
+  align-items: start;
+}
+
+.skill-category {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #222;
+  color: #e65100;
+}
+
+.skill-items {
+  color: #2f2727;
+  line-height: 1.5;
+  font-size: 1.2rem;
+}
+</style>
+
+
+
+<section id="experience" class="experience">
+  <h2 class="section-title">Experience</h2>
+
+  <div class="timeline">
+
+    <div class="timeline-item current">
+      <div class="timeline-icon">
+        <img src="images/icons/ksoc.png" alt="Kahlert School of Computing">
+      </div>
+      <div class="timeline-content">
+        <h3>Graduate Research Assistant</h3>
+        <p class="company">
+          <a href="https://www.cs.utah.edu/" >Kahlert School of Computing</a>
+        </p>
+        <p class="period">May 2023 – Present</p>
+        <ul>
+          <h4>Understanding User Prioritization and Comprehension of Smartphone Permissions</h4>
+          <li>An <strong>Online Questionnaire</strong> developed using Qualtrics to capture the Prioritization and Comprehension of 26 smartphone permission settings (combined from both Android and iOS).</li>
+          <li>A total of 374 participants took part in the survey through <strong>Amazon Mechanical Turk</strong>.Extensive quality checks was incorporated to eliminate participants who used LLMs to complete the
+            survey. </li>
+          <li>Visualisation of rating and ranking data to interpret the grouping of the preferences with the permission settings. Descriptive and Inferential Statistical Analysis to analyze the preferences and their relation to other
+            socio-economic factors like gender, income, etc.</li>
+          <li><strong>Qualitative analysis</strong> of open-ended responses with two undergraduate students using thematic
+            analysis to draw conclusions on user's understanding.</li>
+          <li> This work is published and available <a href="https://doi.org/10.1145/3743739">here</a>, as well as in the <a href="#projects">Projects</a> section.</li>
+
+          <h4>Interdependent Privacy in Smartphone App Permissions (Replication Study)</h4>
+          <li>A <strong>between-subject study</strong> to understand how users perceive the interdependent privacy nature of
+            smartphone permissions</li>
+          <li>Research to capture if users understand interdependent nature of their privacy decisions, do they care about their privacy more than others, and do they want other's to care about their privacy while making these decisions.</li>
+          <li>Identified and created visual cues to capture the interdependent nature of smartphone permissions
+            like Contacts, Photos, Calendar, and File system.</li>
+          <li> More details on this work is in the <a href="#projects">Projects</a> section.</li>
+
+          <h4>Systemization of Knowledge (SoK) : How to improve the user expereince of managing privacy through privacy settings?</h4>
+          <li>A systematic literature review study aimed at consolidating existing knowledge on how users
+            interact with privacy settings and inform <strong>design recommendations for interfaces of privacy settings.</strong></li>
+          <li>The review includes user interactions with privacy permission settings of apps, devices, and services, including privacy policies and cookie consent dialogs.
+            The initial collection had a total of 655 papers from six major databases: Association for Computing Machinery (ACM), Institute of Electrical
+            and Electronics Engineers (IEEE), Scopus, ScienceDirect, Springer, and Web of Science.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-icon">
+        <img src="images/icons/eccles_school_of_business.webp" alt="David Eccles School of Business">
+      </div>
+      <div class="timeline-content">
+        <h3>Research Assistant</h3>
+        <p class="company">
+          <a href="https://eccles.utah.edu/">David Eccles School of Business</a>
+        </p>
+        <p class="period">May 2022 – May 2023</p>
+        <ul>
+          <li>Conducted a research study to understand the features to be extracted from the <a href="https://nijianmo.github.io/amazon/index.html">Amazon Review Data</a>. Developed a data cleaning pipeline capable of <strong>batch-processing 5,000 reviews at a time</strong>, resulting in the processing of a <strong>total of 51,311,621 reviews</strong>.</li>
+          <li>Implemented a data analysis pipeline using Natural Language Processing (NLP) techniques, including <strong>topic modeling</strong>, to identify review features such as readability score (using the <strong>Flesch reading ease score</strong> (Flesch Score) and the <strong>Gunning fog index</strong> (Fog Index)), concreteness, custom dictionary for imperatives (counting sentences that begin with a verb phrase but have no grammatic subject), captured explicitly persuasion-focused statements, etc. </li>
+          <li> Examined the reviews helpfulness using <a href="https://www.liwc.app/">LIWC</a> to measure the active to passive word ratio, first person voice, confident or certain langugae measure, etc. 
+            The review usefulness was then used for improving marketing strategies and product recommendations.</li>
+          <li>Evaluating  marketing communication strategies with customers of popular brands like Patagonia, Nike, etc. on <strong>Instagram by scraping</strong> posts and comments.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Item -->
+    <div class="timeline-item">
+      <div class="timeline-icon">
+        <img src="images/icons/ksoc.png" alt="Kalhert School of Computing">
+      </div>
+      <div class="timeline-content">
+        <h3>Teaching Assistant</h3>
+        <p class="company">
+          <a href="https://www.cs.utah.edu/" >Kahlert School of Computing</a>
+        </p>
+        <p class="period">Aug 2021 – May 2023</p>
+        <ul>
+          <li>Worked as a TA for CS2420-Data Structures & Algorithms for three semesters (Fall 2021, Fall 2022, Spring 2023), a class of <strong>300+ students</strong>.</li>
+          <li>Worked as a TA for CS4440-Computer Security during Spring 2021, a class of 50+ students.</li>
+          <li>Handled responsibilities of <strong>grading, conducted labs & assisted students</strong> with assignments during TA hours.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Item -->
+    <div class="timeline-item">
+      <div class="timeline-icon">
+        <img src="images/icons/bosch.jpeg" alt="Robert Bosch Engineering and Business Solutions">
+      </div>
+      <div class="timeline-content">
+        <h3>Software Engineer</h3>
+        <p class="company">
+          <a href="https://www.bosch.in/" target="_blank">Robert Bosch Engineering and Business Solutions</a>
+        </p>
+        <p class="period">Aug 2018 – Jul 2021</p>
+        <ul>
+          <li>Lead SW Product Developer responsible for providing final Engine Control Unit (ECU) software to Japan and Indian Clients.</li>
+          <li><strong>Test automation using Python scripts</strong>: A time-consuming manual test-cases of OBD regression test was automated to  save 90% of the time.</li>
+          <li>Experience in all stages of V-model SDLC and all quality processes for the work product: Analysis, Design, Coding, Integration, and Testing of customer requirements. </li>
+          <li>Investigated memory and build issues in software,  performed functionality testing of each module, and fixed scheduling order of processes for better resource usage.</li>
+          <li><strong>Vehicle Communication Function Development</strong>: Development of modules like Diagnostic Error Management (DEM), Diagnostic Communication Management (DCM), and Communication stack for Automotive ECU based on AUTOSAR platform. Implementation of diagnostic information communication using the UDS protocol and communication with other ECUs using the CAN protocol.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+/* Container */
+.experience {
+  max-width: 1000px; /* overall page container */
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 3rem;
+}
+
+/* Timeline wrapper */
+.timeline {
+  position: relative;
+}
+
+/* Vertical line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 65px;  /* line passes through icon center */
+  width: 4px;
+  height: 100%;
+  background: #ccc;
+  z-index: 0;
+}
+
+/* Timeline item */
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Circle around icon */
+.timeline-icon {
+  position: absolute;
+  left: 20px; /* icon flush left, some padding */
+  width: 90px; /* bigger circle */
+  height: 90px;
+  border-radius: 50%;
+  border: 3px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+  background: #fff;
+}
+
+.timeline-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; 
+  border-radius: 50%;    
+  padding: 6px;       
+}
+
+/* Highlight current role */
+.timeline-item.current .timeline-icon {
+  border-color:#e65100;
+}
+
+/* Card */
+.timeline-content {
+  background: #fff;
+  margin-left: 150px;
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  width: 800px; 
+  max-width: 100%; 
+}
+
+.timeline-content h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.timeline-content h4{
+  color: #f43606;
+}
+
+.timeline-content .company {
+  margin: 0.4rem 0 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.timeline-content a
+{
+  color: #d32304; 
+  text-decoration: none;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.exp-card .company {
+  font-size: 2rem;
+  margin: 0.2rem 0 0.5rem;
+  color: #f8947c; /* accent orange */
+}
+
+.exp-card .company a {
+  text-decoration: none;
+  color: inherit; /* inherit orange */
+}
+
+.exp-card .company a:hover {
+  text-decoration: underline;
+}
+
+.timeline-content .period {
+  margin: 0.4rem 0 1rem;
+  font-size: 1.2rem;
+  color: #1d1c1c;
+}
+
+.timeline-content ul {
+  padding-left: 1.2rem;
+  margin: 0;
+}
+.timeline-content li {
+  margin-bottom: 0.9rem;
+}
+</style>
+
+
+<!-- ===== EDUCATION ===== -->
+<section id="education" class="education">
+  <h2 class="section-title">Education</h2>
+
+  <div class="education-entry">
+    <div class="edu-header">
+      <img src="images/icons/ksoc.png" alt="University of Utah" class="edu-icon">
+      <div>
+        <h3>University of Utah</h3>
+        <p class="degree"><strong>PhD in Computer Science</strong></p>
+        <a href="https://www.cs.utah.edu/" class="majors">Specilization: Usable Privacy and Security</a>
+        <span class="education-year">Aug 2023 – Present</span>
+    <p class="courses">
+      Courses: Human-Computer Interaction (CS 6540), Social Computing (CS 6965), Applied S/W Security Testing (CS 6963), Advanced Human-Computer Interaction (CS 6545), 
+      Human Aspects of Privacy & Security (CS 6495), Computer Architecture (CS 6810)
+    </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="education-entry">
+    <div class="edu-header">
+      <img src="images/icons/ksoc.png" alt="University of Utah" class="edu-icon">
+      <div>
+        <h3>University of Utah</h3>
+        <p class="degree"><strong>MS in Computing</strong></p>
+        <a href="https://www.cs.utah.edu/" class="majors">Specilization: Data Analysis and Management</a>
+    <span class="education-year">Aug 2021 – May 2023</span>
+    <p class="courses">
+      Courses:  Deep Learning (CS 6955), Natural Language Processing (Cs 6340), Theory of Machine Learning (CS 6966),
+      Probabilistic Machine Learning (CS 6190), Visualization of Scientific Data (CS 6635), Graduate Algorithms (CS 6150), Advanced Database Systems (CS 6530), 
+      Biomedical Data Wrangling (BMI 6016)
+    </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="education-entry">
+    <div class="edu-header">
+      <img src="images/icons/nie.png" alt="NIE" class="edu-icon">
+      <div>
+        <h3>The National Institute of Engineering, Mysuru</h3>
+        <p class="degree"><strong>Bachelor of Technology </strong></p>
+      <a href="https://www.nie.ac.in/electronics-communication-department" class="majors">Majors: Electronics and Communication (Computer Engineering)</a>
+      <span class="education-year">June 2014 – Aug 2018</span>
+      <p class="courses">
+      Key Courses: Data Structures and Algorithms, Artificial Intelligence, Computer Networking, Network Security
+      </p>
+      </div>
+    </div>
+    </div>
+
+</section>
+
+<style>
+/* Education Section */
+.education {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  text-align: center; /* Center align whole section */
+}
+
+.education .section-title {
+  font-size: 3rem;
+  margin-bottom: 2.5rem;
+  text-align: center; /* Title centered */
+}
+
+.education-entry {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 2rem;   /* uniform bottom spacing */
+  padding: 1.5rem;
+  border-left: 4px solid #ddd;
+  background: #fff;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: left;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+}
+
+.edu-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.edu-icon {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.education-year {
+  padding: 0.2rem;
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #777;
+  margin-bottom: 0.2rem;
+}
+
+.education-entry h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.education-entry .degree {
+  margin: 0.3rem 0 0.4rem;
+  font-size: 1.05rem;
+  color: #444;
+}
+
+.education-entry .majors {
+  margin: 0 0 0.6rem;
+  font-size: 1rem;
+  color: #d32304;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.education-entry .courses {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.55;
+  color: #555;
+}
+</style>
+
+<footer class="site-footer">
+    <p>© 2025 Manila Devaraja. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
